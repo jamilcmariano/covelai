@@ -6,5 +6,5 @@ export default function Footer() {
         <p className="mt-1">Powered by AI to help you land your dream job.</p>
       </div>
     </footer>
-  )
+  );
 }

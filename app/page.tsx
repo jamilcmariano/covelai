@@ -1,15 +1,25 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">Job Application Letter Generator</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">
+            Job Application Letter Generator
+          </h1>
           <p className="text-xl text-muted-foreground">
-            Create professional cover letters for your job applications in seconds using AI
+            Create professional cover letters for your job applications in
+            seconds using AI
           </p>
         </div>
 
@@ -17,7 +27,8 @@ export default function Home() {
           <CardHeader>
             <CardTitle>How It Works</CardTitle>
             <CardDescription>
-              Our AI-powered tool helps you create personalized cover letters that stand out
+              Our AI-powered tool helps you create personalized cover letters
+              that stand out
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -43,7 +54,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="font-medium text-lg mb-2">1. Fill the Form</h3>
-                <p className="text-muted-foreground">Enter your details and job information</p>
+                <p className="text-muted-foreground">
+                  Enter your details and job information
+                </p>
               </div>
               <div className="flex flex-col items-center text-center p-4">
                 <div className="bg-primary/10 p-3 rounded-full mb-4">
@@ -69,7 +82,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="font-medium text-lg mb-2">2. Generate Letter</h3>
-                <p className="text-muted-foreground">Our AI creates a personalized cover letter</p>
+                <p className="text-muted-foreground">
+                  Our AI creates a personalized cover letter
+                </p>
               </div>
               <div className="flex flex-col items-center text-center p-4">
                 <div className="bg-primary/10 p-3 rounded-full mb-4">
@@ -90,8 +105,12 @@ export default function Home() {
                     <rect width="20" height="14" x="2" y="3" rx="2" />
                   </svg>
                 </div>
-                <h3 className="font-medium text-lg mb-2">3. Download or Copy</h3>
-                <p className="text-muted-foreground">Use your letter for job applications</p>
+                <h3 className="font-medium text-lg mb-2">
+                  3. Download or Copy
+                </h3>
+                <p className="text-muted-foreground">
+                  Use your letter for job applications
+                </p>
               </div>
             </div>
           </CardContent>
@@ -123,7 +142,8 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Why Use Our Generator?</CardTitle>
             <CardDescription>
-              Stand out from other applicants with a professionally crafted cover letter
+              Stand out from other applicants with a professionally crafted
+              cover letter
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -146,7 +166,9 @@ export default function Home() {
                 </svg>
                 <div>
                   <h3 className="font-medium mb-1">Personalized Content</h3>
-                  <p className="text-muted-foreground">Each letter is tailored to your skills and the specific job</p>
+                  <p className="text-muted-foreground">
+                    Each letter is tailored to your skills and the specific job
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -167,7 +189,9 @@ export default function Home() {
                 </svg>
                 <div>
                   <h3 className="font-medium mb-1">Time-Saving</h3>
-                  <p className="text-muted-foreground">Create professional letters in seconds, not hours</p>
+                  <p className="text-muted-foreground">
+                    Create professional letters in seconds, not hours
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -188,7 +212,9 @@ export default function Home() {
                 </svg>
                 <div>
                   <h3 className="font-medium mb-1">Professional Quality</h3>
-                  <p className="text-muted-foreground">Well-structured letters with proper formatting and language</p>
+                  <p className="text-muted-foreground">
+                    Well-structured letters with proper formatting and language
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -209,7 +235,9 @@ export default function Home() {
                 </svg>
                 <div>
                   <h3 className="font-medium mb-1">AI-Powered</h3>
-                  <p className="text-muted-foreground">Leveraging advanced AI to create compelling content</p>
+                  <p className="text-muted-foreground">
+                    Leveraging advanced AI to create compelling content
+                  </p>
                 </div>
               </div>
             </div>
@@ -217,5 +245,5 @@ export default function Home() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

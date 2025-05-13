@@ -1,15 +1,26 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { useState } from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export interface Language {
-  code: string
-  name: string
+  code: string;
+  name: string;
 }
 
 // Updated language codes to match the unofficial API expectations
@@ -26,22 +37,27 @@ export const languages: Language[] = [
   { code: "JA", name: "Japanese" },
   { code: "ZH", name: "Chinese" },
   { code: "ID", name: "Indonesian" },
-]
+];
 
 interface LanguageSelectorProps {
-  value: string
-  onChange: (value: string) => void
+  value: string;
+  onChange: (value: string) => void;
 }
 
 export function LanguageSelector({ value, onChange }: LanguageSelectorProps) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
-  const selectedLanguage = languages.find((lang) => lang.code === value)
+  const selectedLanguage = languages.find((lang) => lang.code === value);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="outline" role="combobox" aria-expanded={open} className="w-full justify-between">
+        <Button
+          variant="outline"
+          role="combobox"
+          aria-expanded={open}
+          className="w-full justify-between"
+        >
           {selectedLanguage ? selectedLanguage.name : "Select language..."}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -57,11 +73,16 @@ export function LanguageSelector({ value, onChange }: LanguageSelectorProps) {
                   key={language.code}
                   value={language.code}
                   onSelect={(currentValue) => {
-                    onChange(currentValue === value ? "" : currentValue)
-                    setOpen(false)
+                    onChange(currentValue === value ? "" : currentValue);
+                    setOpen(false);
                   }}
                 >
-                  <Check className={cn("mr-2 h-4 w-4", value === language.code ? "opacity-100" : "opacity-0")} />
+                  <Check
+                    className={cn(
+                      "mr-2 h-4 w-4",
+                      value === language.code ? "opacity-100" : "opacity-0",
+                    )}
+                  />
                   {language.name}
                 </CommandItem>
               ))}
@@ -70,5 +91,5 @@ export function LanguageSelector({ value, onChange }: LanguageSelectorProps) {
         </Command>
       </PopoverContent>
     </Popover>
-  )
+  );
 }

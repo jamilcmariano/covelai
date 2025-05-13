@@ -1,21 +1,19 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ModeToggle } from "@/components/mode-toggle"
-import { usePathname } from "next/navigation"
-import { ApiStatus } from "@/components/api-status"
+import Link from "next/link";
+import { ModeToggle } from "@/components/mode-toggle";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <header className="border-b">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="font-bold text-xl">
-          CoverLetter<span className="text-primary">AI</span>
+          Covel<span className="text-primary">AI</span>
         </Link>
         <div className="flex items-center gap-4">
-          <ApiStatus />
           <nav>
             <ul className="flex gap-6">
               <li>
@@ -42,5 +40,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

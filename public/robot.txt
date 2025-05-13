@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+Sitemap: https://covelai.vercel.app/sitemap.xml

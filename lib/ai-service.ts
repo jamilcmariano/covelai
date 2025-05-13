@@ -2,21 +2,23 @@
 // In a real application, you would integrate with Gemini AI or another AI service
 
 export interface LetterGenerationRequest {
-  fullName: string
-  email: string
-  phone: string
-  jobTitle: string
-  companyName: string
-  skills: string
-  additionalNotes?: string
+  fullName: string;
+  email: string;
+  phone: string;
+  jobTitle: string;
+  companyName: string;
+  skills: string;
+  additionalNotes?: string;
 }
 
-export async function generateCoverLetter(request: LetterGenerationRequest): Promise<string> {
+export async function generateCoverLetter(
+  request: LetterGenerationRequest,
+): Promise<string> {
   // In a real implementation, this would call an AI API like Gemini AI
   // For this example, we'll just return a mock response
 
   // Simulate API call delay
-  await new Promise((resolve) => setTimeout(resolve, 2000))
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return `
 Dear Hiring Manager at ${request.companyName},
@@ -33,5 +35,5 @@ Sincerely,
 ${request.fullName}
 ${request.email}
 ${request.phone}
-  `
+  `;
 }
