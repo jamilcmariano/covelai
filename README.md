@@ -34,6 +34,13 @@ CoverLetterAI, Generate you Job Application easily with AI Integrated!
 - Resume Generation
 - AI-Powered Suggestions
 
+## TODO
+- [ ] Multi-Language HRD
+- [ ] Built-in CV Editor
+- [ ] Save history to local web storage
+- [ ] Custom API Key
+- [ ] Optimize web interface
+
 ## Contributing
 - Fork the repository.
 - Create a new branch for your feature or bug fix.
